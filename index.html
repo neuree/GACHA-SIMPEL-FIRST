@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mythology Gacha — Story Battle Spinner</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="wrap" role="application" aria-label="Mythology Gacha">
+  <header>
+    <div class="logo">MYTH</div>
+    <div>
+      <h1>Mythology Gacha — Story Battle Spinner</h1>
+      <p class="lead">Pick categories, press <strong>GACHA!</strong>, and get a random Monster + Hero + Setting for your 20-second story challenge.</p>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="options" aria-hidden="false">
+      <label class="option"><input id="optMonster" type="checkbox" checked /> Monster</label>
+      <label class="option"><input id="optHero" type="checkbox" checked /> Hero</label>
+      <label class="option"><input id="optSetting" type="checkbox" checked /> Setting</label>
+    </div>
+
+    <div class="btns">
+      <button id="btnDraw" class="btn primary" aria-pressed="false">🎲 GACHA!</button>
+      <button id="btnReset" class="btn" aria-pressed="false">Reset</button>
+    </div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="card" id="cardMonster" aria-live="polite">
+      <h3>Monster</h3>
+      <div class="result" id="resMonster">—</div>
+      <div class="small">Try to include this creature in your 20s story!</div>
+    </div>
+
+    <div class="card" id="cardHero" aria-live="polite">
+      <h3>Hero</h3>
+      <div class="result" id="resHero">—</div>
+      <div class="small">Make your hero shine.</div>
+    </div>
+
+    <div class="card" id="cardSetting" aria-live="polite">
+      <h3>Setting</h3>
+      <div class="result" id="resSetting">—</div>
+      <div class="small">Where does the scene take place?</div>
+    </div>
+  </div>
+
+  <div class="results-row" id="noteRow" style="display:none;">
+    <div class="small">Tip: Give teams 20 seconds to perform. Vote for Most Creative / Funniest / Most Chaotic.</div>
+  </div>
+
+  <footer>
+    <div class="credits">Made for English Club — Mythology Night</div>
+    <div class="credits">Press <strong>GACHA!</strong> → Reset to play again</div>
+  </footer>
+</div>
+
+<canvas id="confetti" class="confetti-canvas" aria-hidden="true"></canvas>
+
+<script src="script.js"></script>
+</body>
+</html>
